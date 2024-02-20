@@ -1,5 +1,7 @@
 {
   "about": "about",
   "changeLang": "changeLang",
-  "main": "main"
+  "loader": "",
+  "main": "main",
+  "notFoundPage": ""
 }

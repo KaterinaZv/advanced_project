@@ -1,3 +1,5 @@
 {
-  "changeLang": "Change language"
+  "changeLang": "Change language",
+  "notFoundPage": "Page not Found",
+  "loader": "Loading"
 }
