@@ -3,5 +3,8 @@
   "changeLang": "changeLang",
   "loader": "",
   "main": "main",
-  "notFoundPage": ""
+  "notFoundPage": "",
+  "pageError": "",
+  "reloadPage": "",
+  "throwError": ""
 }

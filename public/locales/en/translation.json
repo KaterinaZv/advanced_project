@@ -1,5 +1,8 @@
 {
   "changeLang": "Change language",
   "notFoundPage": "Page not Found",
-  "loader": "Loading"
+  "loader": "Loading",
+  "pageError": "An unforeseen error occurred",
+  "reloadPage": "Reload page",
+  "throwError": "throw error"
 }
