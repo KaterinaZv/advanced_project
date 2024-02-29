@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './PageLoader.module.scss'
 import { Loader } from 'shared/ui/Loader'
+import cls from './PageLoader.module.scss'
 
 interface PageLoaderProps {
   className?: string
