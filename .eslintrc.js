@@ -46,7 +46,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'comma-dangle': 'off',
     'spaced-comment': 'off',
-    'react/jsx-wrap-multilines': ['error', { prop: false }],
+    'react/jsx-wrap-multilines': ['warn', { prop: false }],
     'object-curly-newline': 'off',
   },
   globals: {
