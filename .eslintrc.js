@@ -39,12 +39,15 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': [
-      'error',
+      'warn',
       { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
     ],
     semi: 0,
     'jsx-quotes': ['error', 'prefer-single'],
     'comma-dangle': 'off',
+    'spaced-comment': 'off',
+    'react/jsx-wrap-multilines': ['error', { prop: false }],
+    'object-curly-newline': 'off',
   },
   globals: {
     __IS_DEV__: true,
