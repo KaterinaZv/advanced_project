@@ -44,6 +44,7 @@ module.exports = {
     ],
     semi: 0,
     'jsx-quotes': ['error', 'prefer-single'],
+    'comma-dangle': 'off',
   },
   globals: {
     __IS_DEV__: true,
