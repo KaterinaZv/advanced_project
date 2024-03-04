@@ -4,5 +4,6 @@
   "loader": "Loading",
   "pageError": "An unforeseen error occurred",
   "reloadPage": "Reload page",
-  "throwError": "throw error"
+  "throwError": "throw error",
+  "toggle": "Toggle"
 }
