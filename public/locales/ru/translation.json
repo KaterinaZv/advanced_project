@@ -1,9 +1,12 @@
 {
-  "changeLang": "Изменить язык",
+  "changeLang": "English",
   "notFoundPage": "Страница не найдена",
   "loader": "Загрузка",
   "pageError": "Произошла непредвиденная ошибка",
   "reloadPage": "Перезагрузить страницу",
   "throwError": "выбросить ошибку",
-  "toggle": "Свернуть"
+  "toggle": "Свернуть",
+  "shortLang": "En",
+  "mainLink": "Главная",
+  "aboutLink": "О сайте"
 }

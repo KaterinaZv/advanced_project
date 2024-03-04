@@ -1,10 +1,13 @@
 {
   "about": "about",
+  "aboutLink": "",
   "changeLang": "changeLang",
   "loader": "",
   "main": "main",
+  "mainLink": "",
   "notFoundPage": "",
   "pageError": "",
   "reloadPage": "",
-  "throwError": ""
+  "throwError": "",
+  "toggle": ""
 }

@@ -1,9 +1,12 @@
 {
-  "changeLang": "Change language",
+  "changeLang": "Русский",
   "notFoundPage": "Page not Found",
   "loader": "Loading",
   "pageError": "An unforeseen error occurred",
   "reloadPage": "Reload page",
   "throwError": "throw error",
-  "toggle": "Toggle"
+  "toggle": "Toggle",
+  "shortLang": "Ру",
+  "mainLink": "Main",
+  "aboutLink": "About us"
 }
