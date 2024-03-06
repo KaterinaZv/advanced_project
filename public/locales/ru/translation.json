@@ -9,5 +9,7 @@
   "shortLang": "En",
   "mainLink": "Главная",
   "aboutLink": "О сайте",
-  "login": "Войти"
+  "login": "Войти",
+  "username": "Введите логин",
+  "password": "Введите пароль"
 }

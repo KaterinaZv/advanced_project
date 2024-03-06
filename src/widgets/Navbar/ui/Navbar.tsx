@@ -4,6 +4,7 @@ import { Modal } from 'shared/ui/Modal'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button } from 'shared/ui/Button'
 import { ButtonTheme } from 'shared/ui/Button/ui/Button'
+import { LoginModal } from 'features/AuthByUsername'
 import cls from './Navbar.module.scss'
 
 interface INavbar {
@@ -14,8 +15,12 @@ export const Navbar = ({ className }: INavbar) => {
   const { t } = useTranslation()
   const [isAuthModal, setIsAuthModal] = useState<boolean>(false)
 
-  const onToggleModal = useCallback(() => {
-    setIsAuthModal((prev) => !prev)
+  const onCloseModal = useCallback(() => {
+    setIsAuthModal(false)
+  }, [])
+
+  const onShowModal = useCallback(() => {
+    setIsAuthModal(true)
   }, [])
 
   return (
@@ -23,11 +28,11 @@ export const Navbar = ({ className }: INavbar) => {
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}
-        onClick={onToggleModal}
+        onClick={onShowModal}
       >
         {t('login')}
       </Button>
-      <Modal isOpen={isAuthModal} onClose={onToggleModal} />
+      <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
     </div>
   )
 }

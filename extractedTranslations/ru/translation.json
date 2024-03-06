@@ -8,7 +8,9 @@
   "mainLink": "",
   "notFoundPage": "",
   "pageError": "",
+  "password": "",
   "reloadPage": "",
   "throwError": "",
-  "toggle": ""
+  "toggle": "",
+  "username": ""
 }
