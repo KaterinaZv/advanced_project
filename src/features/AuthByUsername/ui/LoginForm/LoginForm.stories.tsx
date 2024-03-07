@@ -7,6 +7,9 @@ const meta: Meta<typeof LoginForm> = {
   component: LoginForm,
   parameters: {
     layout: 'centered',
+    initialState: {
+      loginForm: { username: '123', password: 'asd' },
+    },
   },
 }
 

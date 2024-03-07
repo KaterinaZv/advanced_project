@@ -20,6 +20,13 @@ export const Primary: Story = {
   },
 }
 
+export const PrimaryDisabled: Story = {
+  args: {
+    children: 'Text',
+    disabled: true,
+  },
+}
+
 export const Clear: Story = {
   args: {
     children: 'Text',

@@ -4,6 +4,8 @@
   "changeLang": "changeLang",
   "loader": "",
   "login": "",
+  "loginForm": "",
+  "logout": "",
   "main": "main",
   "mainLink": "",
   "notFoundPage": "",

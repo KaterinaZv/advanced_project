@@ -11,5 +11,7 @@
   "aboutLink": "About us",
   "login": "Log in",
   "username": "Enter login",
-  "password": "Enter password"
+  "password": "Enter password",
+  "loginForm": "Authorization form",
+  "logout": "Log out"
 }
