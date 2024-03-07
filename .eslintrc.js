@@ -55,6 +55,8 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'operator-linebreak': 'off',
     'no-param-reassign': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'react/jsx-no-useless-fragment': 'off',
   },
   globals: {
     __IS_DEV__: true,
