@@ -24,11 +24,11 @@ const preview: Preview = {
       </div>
     ),
     (Story: any) => (
-      <StoreProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <StoreProvider>
           <Story />
-        </BrowserRouter>
-      </StoreProvider>
+        </StoreProvider>
+      </BrowserRouter>
     ),
     (Story: any) => (
       <I18nextProvider i18n={i18n}>

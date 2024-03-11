@@ -1,3 +1,5 @@
 {
-  "profile": "Profile"
+  "profile": "User profile",
+  "profileFirstname": "First name",
+  "profileLastname": "Last name"
 }

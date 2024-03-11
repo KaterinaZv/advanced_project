@@ -58,9 +58,11 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'react/jsx-no-useless-fragment': 'off',
     'lines-between-class-members': 'off',
+    'no-undef': 'off',
   },
   globals: {
     __IS_DEV__: true,
+    __API__: true,
   },
   overrides: [
     {
