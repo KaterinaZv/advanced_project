@@ -16,5 +16,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "James",
+    "lastname": "Bond",
+    "age": 50,
+    "currency": "pound",
+    "country": "UK",
+    "city": "London",
+    "username": "admin",
+    "avatar": "https://sportshub.cbsistatic.com/i/2022/09/30/b4bfb3f7-3fa1-4647-a3c3-cd365ca778ea/james-bond-producers-talk-recasting-007-new-actor-plans.jpg"
+  }
 }

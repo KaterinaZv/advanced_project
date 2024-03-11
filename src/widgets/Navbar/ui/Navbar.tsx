@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button } from 'shared/ui/Button'
@@ -12,7 +12,7 @@ interface INavbar {
   className?: string
 }
 
-export const Navbar = ({ className }: INavbar) => {
+export const Navbar = memo(({ className }: INavbar) => {
   const { t } = useTranslation()
   const [isAuthModal, setIsAuthModal] = useState<boolean>(false)
 
@@ -59,4 +59,4 @@ export const Navbar = ({ className }: INavbar) => {
       )}
     </div>
   )
-}
+})

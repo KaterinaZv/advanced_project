@@ -14,10 +14,6 @@
   margin-left: 20px;
 }
 
-.langSwitcher {
-  margin-left: 20px;
-}
-
 .items {
   margin-top: 20px;
   margin-left: 20px;
@@ -26,19 +22,8 @@
   flex-direction: column;
 }
 
-.item {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  fill: var(--inverted-primary-color);
-}
-
-.link {
-  margin-left: 10px;
-  opacity: 1;
+.langSwitcher {
+  margin-left: 20px;
 }
 
 .collapsed {
@@ -52,12 +37,6 @@
 
   .langSwitcher {
     margin-left: 0;
-  }
-
-  .link {
-    opacity: 0;
-    transition: 0.2s opacity;
-    width: 0;
   }
 }
 
