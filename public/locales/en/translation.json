@@ -15,5 +15,7 @@
   "password": "Enter password",
   "loginForm": "Authorization form",
   "logout": "Log out",
-  "edit": "Edit"
+  "edit": "Edit",
+  "cancel": "Cancel",
+  "save": "Save"
 }

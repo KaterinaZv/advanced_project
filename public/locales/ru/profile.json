@@ -1,5 +1,12 @@
 {
   "profile": "Профиль пользователя",
   "profileFirstname": "Имя",
-  "profileLastname": "Фамилия"
+  "profileLastname": "Фамилия",
+  "reloadPage": "Попробуйте перезагрузить страницу",
+  "profileCountry": "Страна",
+  "profileCity": "Город",
+  "profileAge": "Возраст",
+  "profileAvatar": "Аватар",
+  "profileCurrency": "Валюта",
+  "profileUsername": "Юзер"
 }

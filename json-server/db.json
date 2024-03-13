@@ -1,13 +1,37 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title 2", "views": 200 },
-    { "id": "3", "title": "another title 3", "views": 200 },
-    { "id": "4", "title": "another title 4", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title 2",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title 3",
+      "views": 200
+    },
+    {
+      "id": "4",
+      "title": "another title 4",
+      "views": 200
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -17,11 +41,11 @@
     }
   ],
   "profile": {
-    "first": "James",
+    "first": "James007",
     "lastname": "Bond",
     "age": 50,
-    "currency": "pound",
-    "country": "UK",
+    "currency": "USD",
+    "country": "United Kingdom",
     "city": "London",
     "username": "admin",
     "avatar": "https://sportshub.cbsistatic.com/i/2022/09/30/b4bfb3f7-3fa1-4647-a3c3-cd365ca778ea/james-bond-producers-talk-recasting-007-new-actor-plans.jpg"

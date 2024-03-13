@@ -1,5 +1,12 @@
 {
   "profile": "User profile",
   "profileFirstname": "First name",
-  "profileLastname": "Last name"
+  "profileLastname": "Last name",
+  "reloadPage": "Reload page",
+  "profileCountry": "Country",
+  "profileCity": "City",
+  "profileAge": "Age",
+  "profileAvatar": "Avatar",
+  "profileCurrency": "Currency",
+  "profileUsername": "Username"
 }

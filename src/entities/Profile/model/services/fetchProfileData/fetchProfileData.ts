@@ -14,6 +14,6 @@ export const fetchProfileData = createAsyncThunk<
 
     return response.data
   } catch (e) {
-    return rejectWithValue('Wrong username or password')
+    return rejectWithValue('Error')
   }
 })

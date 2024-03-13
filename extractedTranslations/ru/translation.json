@@ -1,8 +1,10 @@
 {
   "about": "about",
   "aboutLink": "",
+  "cancel": "",
   "changeLang": "changeLang",
   "edit": "",
+  "error": "",
   "loader": "",
   "login": "",
   "loginForm": "",
@@ -13,9 +15,12 @@
   "pageError": "",
   "password": "",
   "profile": "",
+  "profileCountry": "",
+  "profileCurrency": "",
   "profileFirstname": "",
   "profileLastname": "",
   "reloadPage": "",
+  "save": "",
   "throwError": "",
   "toggle": "",
   "username": ""
