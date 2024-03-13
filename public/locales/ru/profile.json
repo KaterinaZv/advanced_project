@@ -8,5 +8,10 @@
   "profileAge": "Возраст",
   "profileAvatar": "Аватар",
   "profileCurrency": "Валюта",
-  "profileUsername": "Юзер"
+  "profileUsername": "Юзер",
+  "incorrectUserData": "Пустое поле имя или фамилия",
+  "incorrectAge": "Возраст должен быть целым числом",
+  "incorrectCountry": "Выберете страну из существующих",
+  "noData": "Профиль пуст",
+  "serverError": "Серверная ошибка"
 }

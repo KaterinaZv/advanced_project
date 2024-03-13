@@ -3,6 +3,7 @@ import { getProfileError } from './model/selector/getProfileError/getProfileErro
 import { getProfileForm } from './model/selector/getProfileForm/getProfileForm'
 import { getProfileIsLoading } from './model/selector/getProfileIsLoading/getProfileIsLoading'
 import { getProfileReadonly } from './model/selector/getProfileReadonly/getProfileReadonly'
+import { getProfileValidateErrors } from './model/selector/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData'
 import { updateProfileData } from './model/services/updateProfileData/updateProfileData'
 import { profileActions, profileReducer } from './model/slice/profileSlice'
@@ -22,4 +23,5 @@ export {
   getProfileReadonly,
   getProfileForm,
   updateProfileData,
+  getProfileValidateErrors,
 }

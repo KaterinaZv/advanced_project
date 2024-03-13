@@ -1,5 +1,6 @@
 import { useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 import {
   ProfileCard,
   fetchProfileData,
@@ -7,6 +8,7 @@ import {
   getProfileForm,
   getProfileIsLoading,
   getProfileReadonly,
+  getProfileValidateErrors,
   profileActions,
   profileReducer,
 } from 'entities/Profile'
@@ -18,6 +20,8 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
+import { Text } from 'shared/ui/Text'
+import { TextTheme } from 'shared/ui/Text/ui/Text'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 
 const reducers: ReducersList = {
@@ -29,12 +33,14 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
+  const { t } = useTranslation('profile')
   const dispatch = useAppDispatch()
 
   const formData = useSelector(getProfileForm)
   const error = useSelector(getProfileError)
   const isLoading = useSelector(getProfileIsLoading)
   const readonly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateErrors)
 
   const onChangeFirstname = useCallback(
     (first?: string) => {
@@ -95,13 +101,17 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   )
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') dispatch(fetchProfileData())
   }, [dispatch])
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames('', {}, [className])}>
         <ProfilePageHeader />
+        {validateErrors?.length &&
+          validateErrors.map((er) => (
+            <Text text={t(er)} theme={TextTheme.ERROR} key={er} />
+          ))}
         <ProfileCard
           data={formData}
           error={error}

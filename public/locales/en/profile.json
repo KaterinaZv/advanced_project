@@ -8,5 +8,10 @@
   "profileAge": "Age",
   "profileAvatar": "Avatar",
   "profileCurrency": "Currency",
-  "profileUsername": "Username"
+  "profileUsername": "Username",
+  "incorrectUserData": "Empty field in firstname or lastname",
+  "incorrectAge": "Incorrect age",
+  "incorrectCountry": "Incorrect country",
+  "noData": "No data",
+  "serverError": "Server error"
 }

@@ -104,6 +104,7 @@ const config = {
   globals: {
     __IS_DEV__: true,
     __API__: '',
+    __PROJECT__: 'jest',
   },
 
   // The maximum amount of workers used to run your tests. Can be specified
