@@ -13,6 +13,7 @@
   "main": "main",
   "mainLink": "",
   "mainfffff": "",
+  "notFoundArticle": "",
   "notFoundPage": "",
   "pageError": "",
   "password": "",
@@ -25,5 +26,6 @@
   "save": "",
   "throwError": "",
   "toggle": "",
+  "undefinedArticle": "",
   "username": ""
 }
