@@ -1,5 +1,7 @@
 {
   "articleDetails": "Article details page",
   "article": "Article page",
-  "undefinedArticle": "Article not found"
+  "undefinedArticle": "Article not found",
+  "comment": "Comments",
+  "emptyComments": "Comments not found"
 }

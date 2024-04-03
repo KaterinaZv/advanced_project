@@ -1,5 +1,7 @@
 {
   "articleDetails": "Страница с деталями статьи",
   "article": "Страница со статьями",
-  "undefinedArticle": "Статья не найдена"
+  "undefinedArticle": "Статья не найдена",
+  "comment": "Комментарии",
+  "emptyComments": "Комментарии пока отсутсвуют"
 }
