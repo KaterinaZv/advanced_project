@@ -13,6 +13,7 @@ const profileMock = {
   city: 'London',
   username: 'admin',
   avatar: 'https://sportshub',
+  id: '1',
 }
 
 describe('profileSlice.test', () => {
@@ -37,6 +38,7 @@ describe('profileSlice.test', () => {
         city: 'London',
         username: 'admin',
         avatar: 'https://sportshub',
+        id: '1',
       },
     }
 
@@ -55,6 +57,7 @@ describe('profileSlice.test', () => {
         city: 'London',
         username: 'admin',
         avatar: 'https://sportshub',
+        id: '1',
       },
     })
   })

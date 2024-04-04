@@ -1,6 +1,7 @@
 {
   "about": "about",
   "aboutLink": "",
+  "addComment": "",
   "articleDetails": "",
   "cancel": "",
   "changeLang": "changeLang",
@@ -26,6 +27,7 @@
   "profileLastname": "",
   "reloadPage": "",
   "save": "",
+  "send": "",
   "throwError": "",
   "toggle": "",
   "undefinedArticle": "",

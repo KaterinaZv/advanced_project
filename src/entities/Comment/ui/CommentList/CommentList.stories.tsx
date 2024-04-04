@@ -3,7 +3,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { CommentList } from './CommentList'
 
 const meta: Meta<typeof CommentList> = {
-  title: 'pages/CommentList',
+  title: 'entities/CommentList',
   component: CommentList,
   parameters: {},
 }
@@ -12,10 +12,29 @@ export default meta
 type Story = StoryObj<typeof CommentList>
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    comments: [
+      {
+        text: 'Sfrretoc dgkegtkdbe ergert',
+        user: { id: '1', username: 'First user' },
+        id: '1',
+      },
+      {
+        text: 'cvadfwdfwdsdfefw',
+        user: { id: '2', username: 'Second user' },
+        id: '2',
+      },
+    ],
+  },
 }
 
-export const Dark: Story = {
+export const Loading: Story = {
+  args: {
+    isLoading: true,
+  },
+}
+
+export const DarkWithoutComments: Story = {
   args: {},
   decorators: [
     (Story) => (

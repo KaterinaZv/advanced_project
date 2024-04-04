@@ -15,6 +15,7 @@ const profileMock = {
   city: 'London',
   username: 'admin',
   avatar: 'https://sportshub',
+  id: '1',
 }
 
 describe('updateProfileData.test', () => {

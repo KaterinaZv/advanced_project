@@ -124,7 +124,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       <div className={classNames(cls.ArticleDetails, {}, [className])}>
         {content}
       </div>

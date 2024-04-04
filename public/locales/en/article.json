@@ -3,5 +3,6 @@
   "article": "Article page",
   "undefinedArticle": "Article not found",
   "comment": "Comments",
-  "emptyComments": "Comments not found"
+  "emptyComments": "Comments not found",
+  "addComment": "Add comment"
 }
