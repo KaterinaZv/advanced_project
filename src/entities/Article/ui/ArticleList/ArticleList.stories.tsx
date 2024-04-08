@@ -1,8 +1,7 @@
-import { FC, memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Theme } from 'app/providers/ThemeProvider'
 import { Article, ArticleView } from 'entities/Article'
-import cls from './ArticlesPage.module.scss'
+import { ArticleList } from './ArticleList'
 
 const ARTICLE_MOCK = {
   id: '1',
@@ -80,18 +79,43 @@ const ARTICLE_MOCK = {
   ],
 } as Article
 
-interface ArticlesPageProps {
-  className?: string
+const meta: Meta<typeof ArticleList> = {
+  title: 'entities/ArticleList',
+  component: ArticleList,
+  parameters: {},
 }
 
-const ArticlesPage: FC<ArticlesPageProps> = (props) => {
-  const { className } = props
+export default meta
+type Story = StoryObj<typeof ArticleList>
 
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList articles={[ARTICLE_MOCK]} view={ArticleView.SMALL} />
-    </div>
-  )
+export const PrimaryBig: Story = {
+  args: {
+    articles: [ARTICLE_MOCK],
+    view: ArticleView.BIG,
+  },
 }
 
-export default memo(ArticlesPage)
+export const DarkSmall: Story = {
+  args: { articles: [ARTICLE_MOCK], view: ArticleView.SMALL },
+  decorators: [
+    (Story) => (
+      <div className={`app ${Theme.DARK}`}>
+        <Story />
+      </div>
+    ),
+  ],
+}
+
+export const PrimaryBigIsLoading: Story = {
+  args: {
+    isLoading: true,
+    view: ArticleView.BIG,
+  },
+}
+
+export const PrimarySmallIsLoading: Story = {
+  args: {
+    isLoading: true,
+    view: ArticleView.SMALL,
+  },
+}

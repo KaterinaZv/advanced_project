@@ -1,5 +1,5 @@
 import { FC, memo, useCallback } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -12,6 +12,9 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Button } from 'shared/ui/Button'
+import { ButtonTheme } from 'shared/ui/Button/ui/Button'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { AddCommentForm } from 'features/AddCommentForm'
 import cls from './ArticleDetailsPage.module.scss'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
@@ -33,10 +36,15 @@ const reducers: ReducersList = {
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const { className } = props
   const { t } = useTranslation('article')
+  const navigate = useNavigate()
   const { id } = useParams<{ id: string }>()
   const dispatch = useAppDispatch()
   const comments = useSelector(getArticleComments.selectAll)
   const commentIsLoading = useSelector(getArticleCommentsIsLoading)
+
+  const onBackToList = useCallback(() => {
+    navigate(RoutePath.articles)
+  }, [navigate])
 
   const onSendComment = useCallback(
     (text: string) => {
@@ -60,6 +68,9 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+        <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
+          {t('backToList', { ns: 'translation' })}
+        </Button>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('comment')} />
         <AddCommentForm onSendComment={onSendComment} />

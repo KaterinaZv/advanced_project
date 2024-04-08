@@ -1,18 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
-import ArticleDetailsPage from './ArticleDetailsPage'
+import { Text } from 'shared/ui/Text'
+import { Card } from './Card'
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
+const meta: Meta<typeof Card> = {
+  title: 'shared/Card',
+  component: Card,
   parameters: {},
 }
 
 export default meta
-type Story = StoryObj<typeof ArticleDetailsPage>
+type Story = StoryObj<typeof Card>
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    children: <Text title='Text' text='test test' />,
+  },
 }
 
 export const Dark: Story = {

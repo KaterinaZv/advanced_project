@@ -1,8 +1,7 @@
-import { FC, memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Theme } from 'app/providers/ThemeProvider'
 import { Article, ArticleView } from 'entities/Article'
-import cls from './ArticlesPage.module.scss'
+import { ArticleListItem } from './ArticleListItem'
 
 const ARTICLE_MOCK = {
   id: '1',
@@ -80,18 +79,32 @@ const ARTICLE_MOCK = {
   ],
 } as Article
 
-interface ArticlesPageProps {
-  className?: string
+const meta: Meta<typeof ArticleListItem> = {
+  title: 'entities/ArticleListItem',
+  component: ArticleListItem,
+  parameters: {},
 }
 
-const ArticlesPage: FC<ArticlesPageProps> = (props) => {
-  const { className } = props
+export default meta
+type Story = StoryObj<typeof ArticleListItem>
 
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList articles={[ARTICLE_MOCK]} view={ArticleView.SMALL} />
-    </div>
-  )
+export const PrimaryBig: Story = {
+  args: {
+    article: ARTICLE_MOCK,
+    articleView: ArticleView.BIG,
+  },
 }
 
-export default memo(ArticlesPage)
+export const DarkSmall: Story = {
+  args: {
+    article: ARTICLE_MOCK,
+    articleView: ArticleView.SMALL,
+  },
+  decorators: [
+    (Story) => (
+      <div className={`app ${Theme.DARK}`}>
+        <Story />
+      </div>
+    ),
+  ],
+}
