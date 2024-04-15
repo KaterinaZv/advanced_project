@@ -10,6 +10,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { ArticleView, ArticleViewSelector } from 'entities/Article'
+import { Page } from 'shared/ui/Page'
 import cls from './ArticlesPage.module.scss'
 import {
   articlesPageActions,
@@ -21,6 +22,7 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articles'
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -45,17 +47,26 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
     [dispatch]
   )
 
+  const onLoadNextPage = useCallback(() => {
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchNextArticlesPage())
+    }
+  }, [dispatch])
+
   useInitialEffect(() => {
-    dispatch(fetchArticlesList())
     dispatch(articlesPageActions.initState())
+    dispatch(fetchArticlesList({ page: 1 }))
   })
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticlesPage, {}, [className])}>
+      <Page
+        onScrollEnd={onLoadNextPage}
+        className={classNames(cls.ArticlesPage, {}, [className])}
+      >
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList articles={articles} view={view} isLoading={isLoading} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

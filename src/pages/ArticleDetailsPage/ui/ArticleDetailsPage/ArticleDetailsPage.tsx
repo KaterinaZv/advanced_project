@@ -16,6 +16,7 @@ import { Button } from 'shared/ui/Button'
 import { ButtonTheme } from 'shared/ui/Button/ui/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { AddCommentForm } from 'features/AddCommentForm'
+import { Page } from 'shared/ui/Page'
 import cls from './ArticleDetailsPage.module.scss'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import {
@@ -59,15 +60,15 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('undefinedArticle')}
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
           {t('backToList', { ns: 'translation' })}
         </Button>
@@ -75,7 +76,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
         <Text className={cls.commentTitle} title={t('comment')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentIsLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
