@@ -7,7 +7,6 @@ import {
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { ArticleView, ArticleViewSelector } from 'entities/Article'
 import { Page } from 'shared/ui/Page'
@@ -23,6 +22,7 @@ import {
   getArticlesPageView,
 } from '../../model/selectors/articles'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -54,8 +54,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(fetchArticlesList({ page: 1 }))
+    dispatch(initArticlesPage())
   })
 
   return (
