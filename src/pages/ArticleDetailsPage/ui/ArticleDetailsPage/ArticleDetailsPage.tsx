@@ -16,7 +16,7 @@ import { Button } from 'shared/ui/Button'
 import { ButtonTheme } from 'shared/ui/Button/ui/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { AddCommentForm } from 'features/AddCommentForm'
-import { Page } from 'shared/ui/Page'
+import { Page } from 'widgets/Page'
 import cls from './ArticleDetailsPage.module.scss'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import {

@@ -61,6 +61,7 @@ module.exports = {
     'no-undef': 'off',
     'react/prop-types': 'off',
     'react/no-array-index-key': 'off',
+    'function-paren-newline': 'off',
   },
   globals: {
     __IS_DEV__: true,

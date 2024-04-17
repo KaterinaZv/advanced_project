@@ -9,7 +9,7 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { ArticleView, ArticleViewSelector } from 'entities/Article'
-import { Page } from 'shared/ui/Page'
+import { Page } from 'widgets/Page'
 import cls from './ArticlesPage.module.scss'
 import {
   articlesPageActions,
@@ -58,7 +58,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   })
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPage}
         className={classNames(cls.ArticlesPage, {}, [className])}
